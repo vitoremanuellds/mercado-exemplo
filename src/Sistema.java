@@ -5,7 +5,7 @@ import exemplo.ProdutoRepository;
 public class Sistema {
 
 	public static void main(String[] args) {
-		
+
 		Produto produtoLeite = new Produto("Leite em pó", "Parmalat");
 		Lote lote = new Lote(produtoLeite, 10L);
 		ProdutoRepository catalogo = new ProdutoRepository();
@@ -15,7 +15,7 @@ public class Sistema {
 		Produto produtoSuco = new Produto("Suco", "Árvore");
 		Produto produtoOvoCodorna = new Produto("Ovo de Codorna", "Codorna");
 		Produto produtoPaoDoce = new Produto("Pão Doce", "Padaria");
-
+		
 		catalogo.addProduto(produtoLeite);
 		catalogo.addProduto(produtoPao);
 		catalogo.addProduto(produtoOvoCodorna);
@@ -29,10 +29,10 @@ public class Sistema {
 
 		// catalogo.removeProduto(produtoLeite.getId());
 
-		for (Produto produto : catalogo.listProduto("Leite")) {
+		for (Produto produto : catalogo.listProdutos()) {
 			System.out.println(produto);
 		}
 
-		System.out.println(catalogo);
+		System.out.println(catalogo); */
 	}
 }
