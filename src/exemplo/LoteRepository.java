@@ -1,8 +1,6 @@
 package exemplo;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class LoteRepository {
 
@@ -33,6 +31,10 @@ public class LoteRepository {
         lote.setDataValidade(newDataValidade);
 
         this.addLote(lote);
+    }
+
+    public List<Lote> listLotes() {
+        return new LinkedList<Lote>(this.lotes.values());
     }
 
     public String toString() {
