@@ -32,15 +32,8 @@ public class ProdutoRepository {
         this.addProduto(p);
     }
 
-    public List<Produto> listProduto(String name) {
-        List<Produto> result = new LinkedList<>();
-
-        for (Produto produto : this.catalogo.values()) {
-            if (produto.getNome().toLowerCase().contains(name.toLowerCase().trim())) {
-                result.add(produto);
-            }
-        }
-
+    public List<Produto> listProdutos() {
+        List<Produto> result = new LinkedList<>(this.catalogo.values());
         return result;
     }
 
