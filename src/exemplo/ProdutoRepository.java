@@ -2,6 +2,7 @@ package exemplo;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class ProdutoRepository {
@@ -31,8 +32,8 @@ public class ProdutoRepository {
         this.addProduto(p);
     }
 
-    public LinkedList<Produto> listProduto(String name) {
-        LinkedList<Produto> result = new LinkedList<>();
+    public List<Produto> listProduto(String name) {
+        List<Produto> result = new LinkedList<>();
 
         for (Produto produto : this.catalogo.values()) {
             if (produto.getNome().toLowerCase().contains(name.toLowerCase().trim())) {
